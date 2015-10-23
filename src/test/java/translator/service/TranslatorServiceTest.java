@@ -20,8 +20,10 @@ public class TranslatorServiceTest {
     TranslatorService translatorService;
     @Test
     public void translateTest() throws Exception {
-        TranslatedText translatedText = translatorService.translate("en", "es", "This is a test of translation service");
-        assertEquals("Esto es una prueba de servicio de traducción",translatedText.getTranslation());
+        TranslatedText translatedText = translatorService.translate("en", "es", "The greatest glory in living lies "
+        	+ "not in never falling, but in rising every time we fall.");
+        assertEquals("La mayor gloria en la vida no consiste en nunca caer, "
+        	+ "sino en levantarnos cada vez que caemos.",translatedText.getTranslation());
     }
 
 }
